@@ -51,9 +51,23 @@ namespace StackAndQueue.QueueLinkedList
         }
 
         /// <summary>
+        /// Create a method to pop the value
+        /// </summary>
+        public void Dequeue()
+        {
+            if (front == null)
+            {
+                Console.WriteLine("\nQueue is empty! Nothing to Pop");
+                return;
+            }
+            Console.WriteLine("\nDEQUEUED ELEMENT: {0}", front.data);
+            front = front.next;
+        }
+
+        /// <summary>
         /// Display the Queue
         /// </summary>
-        public void DisplayQueue()
+        public int DisplayQueue()
         {
             Node<Gtype> temp = front;
             int count = 0;
@@ -64,6 +78,7 @@ namespace StackAndQueue.QueueLinkedList
                 Console.WriteLine("Stack element at {0} is: {1}", count, temp.data);
                 temp = temp.next;
             }
+            return count;
             
         }
 

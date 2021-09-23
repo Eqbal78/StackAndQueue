@@ -64,9 +64,8 @@ namespace StackAndQueue.StackLinkedList
         {
             if (this.top == null)
             {
-                Console.WriteLine("No element in stack to pop");
-                return;
-            }
+                Console.WriteLine("No element in stack to pop");   
+            } 
             Console.WriteLine("\n{0} is the Top of the Stack",this.top.data); 
         }
 
