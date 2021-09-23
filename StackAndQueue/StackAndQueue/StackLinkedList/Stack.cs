@@ -43,21 +43,48 @@ namespace StackAndQueue.StackLinkedList
             Console.WriteLine("Stack Push element is: "+ value);
         }
 
-   
+        /// <summary>
+        /// Pop the Element in top
+        /// </summary>
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("\nStack is empty! Nothing to Pop");
+                return;
+            }
+            Console.WriteLine("\n***POPPED ELEMENT***\n{0}", this.top.data);
+            this.top = top.next;
+        }
+
+        /// <summary>
+        /// Peek at top element 
+        /// </summary>
+        public void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("No element in stack to pop");
+                return;
+            }
+            Console.WriteLine("\n{0} is the Top of the Stack",this.top.data); 
+        }
+
         /// <summary>
         /// Display stack data
         /// </summary>
-        public void Display()
+        public int Display()
         {
             Node<Gtype> temp = top;
             int count = 0;
-            //
+            //Treverse the Element at Last
             while (temp != null)
             {
                 count++;
                 Console.WriteLine("Stack element at {0} is: {1}", count, temp.data);
                 temp = temp.next;
             }
+            return count;
         }
     }
 }
