@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using StackAndQueue.StackLinkedList;
+using StackAndQueue.QueueLinkedList;
 
 namespace StackAndQueue
 {
@@ -17,7 +18,7 @@ namespace StackAndQueue
                 Stack<int> stack = new Stack<int>();
                 Console.WriteLine("*********************************************");
                 Console.WriteLine("\nChoose an Options.");
-                Console.WriteLine("1. Stack push Element \n2. Stack Pop Element \n3. Exit");
+                Console.WriteLine("1. Stack push Element \n2. Stack Pop Element \n3. Queue Enqueue Element \n4. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -52,6 +53,19 @@ namespace StackAndQueue
                         break;
 
                     case 3:
+                        Oueue<int> queue = new Oueue<int>();
+                        //Add operation
+                        queue.Enqueue(56);
+                        queue.Enqueue(30);
+                        queue.Enqueue(70);
+
+                        //Display operation
+                        Console.Write("\n-----DISPLAYING QUEUE ELEMENTS-----\n\n");
+                        queue.DisplayQueue();
+                        
+                        break;
+
+                    case 4:
                         Environment.Exit(0);
                         break;
 
